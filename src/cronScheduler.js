@@ -72,6 +72,7 @@ class CronScheduler {
     };
 
     // Function to execute the task and handle errors
+    // Function to execute the task and handle errors
     const executeTask = async () => {
       try {
         scheduledTask.status = 'running';
@@ -92,8 +93,17 @@ class CronScheduler {
         scheduledTask.status = 'error';
         scheduledTask.nextRun = new Date(Date.now() + intervalMs);
         
-        this.log(`Error in task ${taskName}: ${error.message}`, 'error');
-        console.error(`Error in scheduled task ${taskName}:`, error);
+        // Enhanced error logging with stack trace
+        const errorMessage = error.stack || error.message || String(error);
+        this.log(`Error in task ${taskName}: ${errorMessage}`, 'error');
+        
+        // Still log to console but with more context
+        console.error(`Error in scheduled task ${taskName} at ${new Date().toISOString()}:`, {
+          error: errorMessage,
+          taskId: taskId,
+          runCount: scheduledTask.runCount,
+          errorCount: scheduledTask.errorCount
+        });
       }
     };
 
@@ -200,7 +210,7 @@ class CronScheduler {
    * @param {string} message - The message to log
    * @param {string} [level='info'] - Log level
    */
-  log(message, level = 'info') {
+  async log(message, level = 'info') {
     if (!this.logEnabled) return;
     
     const timestamp = new Date().toISOString();
@@ -215,10 +225,10 @@ class CronScheduler {
       console.log(logEntry.trim());
     }
     
-    // File logging
+    // File logging - use async operation to avoid blocking
     try {
       const logFile = path.join(this.logPath, `cron-${new Date().toISOString().split('T')[0]}.log`);
-      fs.appendFileSync(logFile, logEntry);
+      await fs.promises.appendFile(logFile, logEntry);
     } catch (error) {
       console.error(`Failed to write to log file: ${error.message}`);
     }

@@ -1,6 +1,6 @@
 # Node.js Cron Scheduler
 
-A lightweight, non-blocking cron scheduler for Node.js applications without external dependencies.
+A lightweight, non-blocking cron scheduler for Node.js applications without using any depending libraries
 
 ## Features
 
@@ -181,6 +181,30 @@ By default, logs are written to both the console and daily log files in the `./l
 - Timestamp
 - Log level (INFO, WARN, ERROR)
 - Message
+
+## Possible Future Improvements
+
+### Task Management
+- **Task Prioritization**: Support prioritizing certain tasks over others when multiple are due to run
+- **Task Retry Logic**: Implement automatic retry attempts for failed tasks with configurable backoff strategies
+- **Task Timeout**: Add configurable maximum execution time to prevent tasks from running indefinitely
+
+### Technical Enhancements
+- **Drift Correction**: Improve timing accuracy by preventing drift that can occur with setInterval
+- **State Persistence**: Add ability to persist scheduled tasks across application restarts
+- **Event System**: Implement event emitters to allow subscribing to task lifecycle events
+- **Memory Usage Optimization**: Implement log rotation and better memory management
+
+### Performance
+- **Resource Management**: Add CPU and memory usage limits for task execution
+- **Performance Metrics**: Add built-in performance tracking for task execution
+- **Intelligent Scheduling**: Schedule similar tasks in batches to improve efficiency
+
+### Scheduling Flexibility
+- **Advanced Cron Patterns**: Support for cron-like syntax for more complex scheduling patterns
+- **Specific Times**: Schedule tasks to run at specific times of day rather than intervals
+- **Timezone Support**: Add support for different timezones when scheduling daily or time-specific tasks
+- **Calendar-based Scheduling**: Schedule tasks for specific days of week, month, or year
 
 ## License
 
