@@ -185,26 +185,26 @@ By default, logs are written to both the console and daily log files in the `./l
 ## Possible Future Improvements
 
 ### Task Management
-- **Task Prioritization**: Support prioritizing certain tasks over others when multiple are due to run ([Possible Solution](https://www.geeksforgeeks.org/implementation-priority-queue-javascript/))
-- **Task Retry Logic**: Implement automatic retry attempts for failed tasks with configurable backoff strategies ([Possible Solution](https://martinfowler.com/bliki/CircuitBreaker.html))
-- **Task Timeout**: Add configurable maximum execution time to prevent tasks from running indefinitely ([Possible Solution](https://developer.mozilla.org/en-US/docs/Web/API/AbortController))
+- **Task Prioritization**: Support prioritizing certain tasks over others when multiple are due to run (Could be done via: Priority Queue Pattern: [Link](https://www.geeksforgeeks.org/implementation-priority-queue-javascript/))
+- **Task Retry Logic**: Implement automatic retry attempts for failed tasks with configurable backoff strategies (Could be done via: Circuit Breaker Pattern: [Link](https://martinfowler.com/bliki/CircuitBreaker.html))
+- **Task Timeout**: Add configurable maximum execution time to prevent tasks from running indefinitely (Could be done via: Promise.race() with AbortController: [Link](https://developer.mozilla.org/en-US/docs/Web/API/AbortController))
 
 ### Technical Enhancements
-- **Drift Correction**: Improve timing accuracy by preventing drift that can occur with setInterval ([Possible Solution](https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args))
-- **State Persistence**: Add ability to persist scheduled tasks across application restarts ([Possible Solution](https://nodejs.org/api/events.html#events_class_eventemitter))
-- **Event System**: Implement event emitters to allow subscribing to task lifecycle events ([Possible Solution](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback))
-- **Memory Usage Optimization**: Implement log rotation and better memory management ([Possible Solution](https://github.com/winstonjs/winston-daily-rotate-file))
+- **Drift Correction**: Improve timing accuracy by preventing drift that can occur with setInterval (Could be done via: Dynamic setTimeout Recalculation: [Link](https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args))
+- **State Persistence**: Add ability to persist scheduled tasks across application restarts (Could be done via: EventEmitter Integration: [Link](https://nodejs.org/api/events.html#events_class_eventemitter))
+- **Event System**: Implement event emitters to allow subscribing to task lifecycle events (Could be done via: File-based Task Persistence: [Link](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback))
+- **Memory Usage Optimization**: Implement log rotation and better memory management (Could be done via: Log Rotation with winston/rotating-file-stream: [Link](https://github.com/winstonjs/winston-daily-rotate-file))
 
 ### Performance
-- **RePossible Solution Management**: Add CPU and memory usage limits for task execution ([Possible Solution](https://nodejs.org/api/worker_threads.html))
-- **Performance Metrics**: Add built-in performance tracking for task execution ([Possible Solution](https://nodejs.org/api/perf_hooks.html))
-- **Intelligent Scheduling**: Schedule similar tasks in batches to improve efficiency ([Possible Solution](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/))
+- **Resource Management**: Add CPU and memory usage limits for task execution (Could be done via: Worker Threads: [Link](https://nodejs.org/api/worker_threads.html))
+- **Performance Metrics**: Add built-in performance tracking for task execution (Could be done via: Performance Hooks API: [Link](https://nodejs.org/api/perf_hooks.html))
+- **Intelligent Scheduling**: Schedule similar tasks in batches to improve efficiency (Could be done via: Task Batching with setTimeout Alignment: [Link](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/))
 
 ### Scheduling Flexibility
-- **Advanced Cron Patterns**: Support for cron-like syntax for more complex scheduling patterns ([Possible Solution](https://github.com/harrisiirak/cron-parser))
-- **Specific Times**: Schedule tasks to run at specific times of day rather than intervals ([Possible Solution](https://date-fns.org/docs/Getting-Started))
-- **Timezone Support**: Add support for different timezones when scheduling daily or time-specific tasks ([Possible Solution](https://moment.github.io/luxon/))
-- **Calendar-based Scheduling**: Schedule tasks for specific days of week, month, or year ([Possible Solution](https://github.com/ruleenginejs/ruleengine))
+- **Advanced Cron Patterns**: Support for cron-like syntax for more complex scheduling patterns (Could be done via: Cron Expression Parser: [Link](https://github.com/harrisiirak/cron-parser))
+- **Specific Times**: Schedule tasks to run at specific times of day rather than intervals (Could be done via: Date-fns or Luxon Integration: [Link](https://date-fns.org/docs/Getting-Started))
+- **Timezone Support**: Add support for different timezones when scheduling daily or time-specific tasks (Could be done via: Temporal API Patterns: [Link](https://moment.github.io/luxon/))
+- **Calendar-based Scheduling**: Schedule tasks for specific days of week, month, or year (Could be done via: Rule-based Scheduler: [Link](https://github.com/ruleenginejs/ruleengine))
 
 ## License
 
