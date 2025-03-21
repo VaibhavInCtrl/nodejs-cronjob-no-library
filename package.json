@@ -1,20 +1,30 @@
 {
-  "name": "company",
+  "name": "node-cron-scheduler",
   "version": "1.0.0",
-  "description": "",
-  "main": "cronScheduler.js",
+  "description": "A lightweight, non-blocking cron scheduler without external dependencies",
+  "main": "src/cronScheduler.js",
   "scripts": {
+    "start": "node examples/example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cron",
+    "scheduler",
+    "nodejs",
+    "task",
+    "timer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VaibhavInCtrl/nodejs-cronjob-no-library.git"
+    "url": "git+https://github.com/yourusername/node-cron-scheduler.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VaibhavInCtrl/nodejs-cronjob-no-library/issues"
+    "url": "https://github.com/yourusername/node-cron-scheduler/issues"
   },
-  "homepage": "https://github.com/VaibhavInCtrl/nodejs-cronjob-no-library#readme"
+  "homepage": "https://github.com/yourusername/node-cron-scheduler#readme"
 }

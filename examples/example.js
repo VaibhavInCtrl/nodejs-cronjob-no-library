@@ -2,8 +2,8 @@ const CronScheduler = require('../src/cronScheduler');
 
 // Initialize the scheduler
 const scheduler = new CronScheduler({ 
-  logPath: './logs', // Where to store log files
-  logEnabled: true   // Enable logging
+  logPath: 'logs',
+  logEnabled: true
 });
 
 // Example 1: Heavy computation task (non-blocking)

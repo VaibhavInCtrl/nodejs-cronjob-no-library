@@ -21,13 +21,13 @@ Simply copy the `cronScheduler.js` file into your project:
 git clone https://github.com/VaibhavInCtrl/node-cron-scheduler.git
 
 # Or just copy the file to your project
-cp cronScheduler.js /path/to/your/project/
+cp src/cronScheduler.js /path/to/your/project/
 ```
 
 ## Quick Start
 
 ```javascript
-const CronScheduler = require('./cronScheduler');
+const CronScheduler = require('../src/cronScheduler');
 
 // Initialize the scheduler
 const scheduler = new CronScheduler();
