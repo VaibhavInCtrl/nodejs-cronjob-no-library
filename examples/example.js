@@ -1,4 +1,4 @@
-const CronScheduler = require('./cronScheduler');
+const CronScheduler = require('../src/cronScheduler');
 
 // Initialize the scheduler
 const scheduler = new CronScheduler({ 
