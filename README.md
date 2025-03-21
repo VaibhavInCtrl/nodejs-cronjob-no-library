@@ -18,7 +18,7 @@ Simply copy the `cronScheduler.js` file into your project:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/node-cron-scheduler.git
+git clone https://github.com/VaibhavInCtrl/node-cron-scheduler.git
 
 # Or just copy the file to your project
 cp cronScheduler.js /path/to/your/project/
