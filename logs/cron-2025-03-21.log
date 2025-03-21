@@ -1,0 +1,11 @@
+[2025-03-21T04:51:46.906Z] [INFO] CronScheduler initialized
+[2025-03-21T04:51:46.920Z] [INFO] Scheduling task: Heavy Computation Task to run every 5 minutes
+[2025-03-21T04:51:46.920Z] [INFO] Running task: Heavy Computation Task
+[2025-03-21T04:51:46.921Z] [INFO] Scheduling task: Send Email Notification to run every 1 hour
+[2025-03-21T04:51:46.921Z] [INFO] Scheduling task: Generate Daily Report to run every 12 hours 1 day
+[2025-03-21T04:51:46.927Z] [INFO] Task Heavy Computation Task completed successfully. Next run at: Fri Mar 21 2025 10:26:46 GMT+0530 (India Standard Time)
+[2025-03-21T04:52:01.168Z] [INFO] Shutting down CronScheduler
+[2025-03-21T04:52:01.169Z] [INFO] Cancelled task: Heavy Computation Task
+[2025-03-21T04:52:01.169Z] [INFO] Cancelled task: Send Email Notification
+[2025-03-21T04:52:01.170Z] [INFO] Cancelled task: Generate Daily Report
+[2025-03-21T04:52:01.170Z] [INFO] All tasks cancelled, shutdown complete
