@@ -2,6 +2,23 @@
 
 A lightweight, non-blocking cron scheduler for Node.js applications without using any depending libraries
 
+## Quick Navigation
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+  - [Initializing the Scheduler](#initializing-the-scheduler)
+  - [Scheduling Tasks](#scheduling-tasks)
+  - [Managing Tasks](#managing-tasks)
+  - [Handling Graceful Shutdown](#handling-graceful-shutdown)
+- [Task Configuration](#task-configuration)
+- [Frequency Options](#frequency-options)
+- [API Reference](#api-reference)
+- [Error Handling](#error-handling)
+- [Logging](#logging)
+- [Possible Future Improvements](#possible-future-improvements)
+- [License](#license)
+
 ## Features
 
 - ⏱️ Flexible scheduling from minutes to hours to days
